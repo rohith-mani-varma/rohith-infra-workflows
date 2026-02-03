@@ -1,0 +1,17 @@
+name: Stop Dev VM (Mock)
+
+on:
+  workflow_call:
+    inputs:
+      vm_name:
+        required: true
+        type: string
+
+jobs:
+  stop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mock stop VM
+        run: |
+          echo "Stopping VM: ${{ inputs.vm_name }}"
+          date
