@@ -1,0 +1,17 @@
+name: Start Dev VM (Mock)
+
+on:
+  workflow_call:
+    inputs:
+      vm_name:
+        required: true
+        type: string
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mock start VM
+        run: |
+          echo "Starting VM: ${{ inputs.vm_name }}"
+          date
